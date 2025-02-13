@@ -24,6 +24,7 @@ Currently, there is no feature yet available for MLFlow to integrate fully with 
 
 ## MLFlow Setup
 1.	Launch the MLFlow Web Interface: http://{edge_ip}:5000.
+![MlFlow Web Ui](https://github.com/EmersonDeltaV/mlflow/blob/main/assets/sample-ui-image.png?raw=true)
 
 ## Complementary Applications
 To create a complete ecosystem however, MLflow should ideally be integrated with other applications. The Edge Orchestration Marketplace currenly support only some of these, but to give an idea, here are some apps normally used in tandem.
