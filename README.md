@@ -20,7 +20,7 @@ This repo holds the Dockerfile image used for the MLFlow application currently a
 1. You must have a MLFlow installed via the Edge Orchestration Marketplace
 
 ## Use Cases
-Currently, there is no feature yet available for MLFlow to integrate fully with MLFlow.
+Currently, there is no feature yet available for MLFlow to integrate fully with the DeltaV Edge Environment.
 
 ## MLFlow Setup
 1.	Launch the MLFlow Web Interface: http://{edge_ip}:5000.
