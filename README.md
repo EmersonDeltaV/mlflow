@@ -28,35 +28,36 @@ Currently, there is no feature yet available for MLFlow to integrate fully with 
 
 ## Complementary Applications
 To create a complete ecosystem however, MLflow should ideally be integrated with other applications. The Edge Orchestration Marketplace currenly support only some of these, but to give an idea, here are some apps normally used in tandem.
+## Complementary Applications
 1. **TensorFlow**:
    - **Description**: An end-to-end open-source platform for machine learning.
    - **Use Case**: Model training and deployment.
    - **Integration**: Use MLflow to track experiments and manage TensorFlow models.
-   - **Documentation**: TensorFlow Integration
+   - **Documentation**: [TensorFlow Integration](https://mlflow.org/docs/latest/deep-learning/tensorflow/index.html)
 
 2. **Apache Spark**:
    - **Description**: A unified analytics engine for large-scale data processing.
    - **Use Case**: Data preprocessing and distributed training.
    - **Integration**: Use MLflow to track and manage Spark MLlib models.
-   - **Documentation**: MLflow with Apache Spark
+   - **Documentation**: [MLflow with Apache Spark](https://mlflow.org/docs/latest/python_api/mlflow.spark.html)
 
 3. **Kubernetes**:
    - **Description**: An open-source system for automating deployment, scaling, and management of containerized applications.
    - **Use Case**: Model deployment and scaling.
    - **Integration**: Deploy MLflow tracking server and models on Kubernetes.
-   - **Documentation**: MLflow on Kubernetes
+   - **Documentation**: [MLflow on Kubernetes](https://mlflow.org/docs/latest/deployment/deploy-model-to-kubernetes/index.html)
 
 4. **PostgreSQL**:
    - **Description**: A powerful, open-source object-relational database system.
    - **Use Case**: Store MLflow tracking data and artifacts.
    - **Integration**: Configure MLflow to use PostgreSQL as the backend store.
-   - **Documentation**: MLflow Tracking with PostgreSQL
+   - **Documentation**: [MLflow Tracking with PostgreSQL](https://www.restack.io/docs/mlflow-knowledge-mlflow-postgres-integration)
 
-5. **Jupyter** \(currently available in the Marketplace\):
+5. **Jupyter**:
    - **Description**: An open-source web application for creating and sharing documents that contain live code, equations, visualizations, and narrative text.
    - **Use Case**: Interactive data analysis and model development.
    - **Integration**: Track Jupyter notebook runs and log results to MLflow.
-   - **Documentation**: MLflow with Jupyter Notebooks
+   - **Documentation**: [MLflow with Jupyter Notebooks](https://www.restack.io/docs/mlflow-knowledge-mlflow-jupyterhub-guide)
 
 6. **MinIO**:
    - **Description**: A high-performance, S3-compatible object storage service.
