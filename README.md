@@ -18,12 +18,15 @@ This repo holds the Dockerfile image used for the MLFlow application currently a
 # Prerequisites
 
 1. You must have a MLFlow installed via the Edge Orchestration Marketplace
+2. You must have PostgreSQL and PGAdmin installed from the marketplace. Create a database for mlflow backkend uri storage.
+3. You must have Minio installed from the marketplace. Create a bucket and a new pair of access and access secret keys.
 
 ## Use Cases
 Currently, there is no feature yet available for MLFlow to integrate fully with the DeltaV Edge Environment.
 
 ## MLFlow Setup
-1.	Launch the MLFlow Web Interface: http://{edge_ip}:5000.
+1. During App Deployment, fill in the necessary details to setup the backend uri storage and artifact storage.
+2.	Launch the MLFlow Web Interface: http://{edge_ip}:5000.
 ![MlFlow Web Ui](https://github.com/EmersonDeltaV/mlflow/blob/main/assets/sample-ui-image.png?raw=true)
 
 ## Complementary Applications
@@ -64,3 +67,6 @@ To create a complete ecosystem however, MLflow should ideally be integrated with
    - **Use Case**: Store MLflow artifacts such as models, datasets, and configuration files.
    - **Integration**: Configure MLflow to use MinIO as the artifact store.
    - **Documentation**: [MLflow MinIO Integration](https://www.restack.io/docs/mlflow-knowledge-mlflow-minio-integration)
+  
+## Changelist
+- **03/26/2025** - Added provisions and modified setup for Backend URI and Artifact URI storage.
