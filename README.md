@@ -22,51 +22,38 @@ This repo holds the Dockerfile image used for the MLFlow application currently a
 3. You must have Minio installed from the marketplace. Create a bucket and a new pair of access and access secret keys.
 
 ## Use Cases
-Currently, there is no feature yet available for MLFlow to integrate fully with the DeltaV Edge Environment.
+Currently, an MLFlow stack with PostgreSQL and Minio is available to integrate fully with the DeltaV Edge Environment.
 
-## MLFlow Setup
-1. During App Deployment, fill in the necessary details to setup the backend uri storage and artifact storage.
-2.	Launch the MLFlow Web Interface: http://{edge_ip}:5000.
-![MlFlow Web Ui](https://github.com/EmersonDeltaV/mlflow/blob/main/assets/sample-ui-image.png?raw=true)
-
-## Complementary Applications
-To create a complete ecosystem however, MLflow should ideally be integrated with other applications. The Edge Orchestration Marketplace currenly support only some of these, but to give an idea, here are some apps normally used in tandem.
-## Complementary Applications
-1. **TensorFlow**:
-   - **Description**: An end-to-end open-source platform for machine learning.
-   - **Use Case**: Model training and deployment.
-   - **Integration**: Use MLflow to track experiments and manage TensorFlow models.
-   - **Documentation**: [TensorFlow Integration](https://mlflow.org/docs/latest/deep-learning/tensorflow/index.html)
-
-2. **Apache Spark**:
-   - **Description**: A unified analytics engine for large-scale data processing.
-   - **Use Case**: Data preprocessing and distributed training.
-   - **Integration**: Use MLflow to track and manage Spark MLlib models.
-   - **Documentation**: [MLflow with Apache Spark](https://mlflow.org/docs/latest/python_api/mlflow.spark.html)
-
-3. **Kubernetes**:
-   - **Description**: An open-source system for automating deployment, scaling, and management of containerized applications.
-   - **Use Case**: Model deployment and scaling.
-   - **Integration**: Deploy MLflow tracking server and models on Kubernetes.
-   - **Documentation**: [MLflow on Kubernetes](https://mlflow.org/docs/latest/deployment/deploy-model-to-kubernetes/index.html)
-
-4. **PostgreSQL**:
+## Complementary Application Setup
+To create a complete ecosystem, MLflow should ideally be integrated with other applications. The Edge Orchestration Marketplace currenly support the following applications to deploy a complete ML workflow stack.
+1. **PostgreSQL**:
    - **Description**: A powerful, open-source object-relational database system.
    - **Use Case**: Store MLflow tracking data and artifacts.
-   - **Integration**: Configure MLflow to use PostgreSQL as the backend store.
+   - **Integration**: Configure MLflow to use PostgreSQL as the backend store. Create a database for MLFlow use.
    - **Documentation**: [MLflow Tracking with PostgreSQL](https://www.restack.io/docs/mlflow-knowledge-mlflow-postgres-integration)
+   - **Emerson Github Link**:[EmersonDeltaV/postgresql](https://github.com/EmersonDeltaV/postgresql) and [EmersonDeltaV/pgadmin](https://github.com/EmersonDeltaV/pgadmin)
 
 5. **Jupyter**:
    - **Description**: An open-source web application for creating and sharing documents that contain live code, equations, visualizations, and narrative text.
    - **Use Case**: Interactive data analysis and model development.
    - **Integration**: Track Jupyter notebook runs and log results to MLflow.
    - **Documentation**: [MLflow with Jupyter Notebooks](https://www.restack.io/docs/mlflow-knowledge-mlflow-jupyterhub-guide)
+   - **Emerson Github Link**:[EmersonDeltaV/jupyter-labs-for-edge](https://github.com/EmersonDeltaV/jupyter-labs-for-edge)
 
 6. **MinIO**:
    - **Description**: A high-performance, S3-compatible object storage service.
    - **Use Case**: Store MLflow artifacts such as models, datasets, and configuration files.
-   - **Integration**: Configure MLflow to use MinIO as the artifact store.
+   - **Integration**: Configure MLflow to use MinIO as the artifact store. Create a bucket for artifact storage and generate access keys for MLFLow use.
    - **Documentation**: [MLflow MinIO Integration](https://www.restack.io/docs/mlflow-knowledge-mlflow-minio-integration)
+   - **Emerson Github Link**:[EmersonDeltaV/minio]()
+
+## MLFlow Setup
+1. During App Deployment, fill in the necessary details to setup the backend uri storage and artifact storage.
+2.	Launch the MLFlow Web Interface: http://{edge_ip}:5000.
+![MlFlow Web Ui](https://github.com/EmersonDeltaV/mlflow/blob/main/assets/sample-ui-image.png?raw=true)
+3. JupyterLabs model training can be tracked and logged with MLFlow.
+
   
 ## Changelist
 - **03/26/2025** - Added provisions and modified setup for Backend URI and Artifact URI storage.
+- **03/26/2025** - Reorganized setup of applications for full stack.
