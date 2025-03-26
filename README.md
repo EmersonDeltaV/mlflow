@@ -33,14 +33,14 @@ To create a complete ecosystem, MLflow should ideally be integrated with other a
    - **Documentation**: [MLflow Tracking with PostgreSQL](https://www.restack.io/docs/mlflow-knowledge-mlflow-postgres-integration)
    - **Emerson Github Link**:[EmersonDeltaV/postgresql](https://github.com/EmersonDeltaV/postgresql) and [EmersonDeltaV/pgadmin](https://github.com/EmersonDeltaV/pgadmin)
 
-5. **Jupyter**:
+2. **Jupyter**:
    - **Description**: An open-source web application for creating and sharing documents that contain live code, equations, visualizations, and narrative text.
    - **Use Case**: Interactive data analysis and model development.
    - **Integration**: Track Jupyter notebook runs and log results to MLflow.
    - **Documentation**: [MLflow with Jupyter Notebooks](https://www.restack.io/docs/mlflow-knowledge-mlflow-jupyterhub-guide)
    - **Emerson Github Link**:[EmersonDeltaV/jupyter-labs-for-edge](https://github.com/EmersonDeltaV/jupyter-labs-for-edge)
 
-6. **MinIO**:
+3. **MinIO**:
    - **Description**: A high-performance, S3-compatible object storage service.
    - **Use Case**: Store MLflow artifacts such as models, datasets, and configuration files.
    - **Integration**: Configure MLflow to use MinIO as the artifact store. Create a bucket for artifact storage and generate access keys for MLFLow use.
