@@ -53,7 +53,11 @@ To create a complete ecosystem, MLflow should ideally be integrated with other a
 ![MlFlow Web Ui](https://github.com/EmersonDeltaV/mlflow/blob/main/assets/sample-ui-image.png?raw=true)
 3. JupyterLabs model training can be tracked and logged with MLFlow.
 
+### Renewing the MinIO access keys
+For now, there is no way to renew the access keys to minio through the MLFlow Web UI. To access the artifact storage again from Jupyter, delete the app instance from Zededa. Retain the previously used volume instance and reploy the application again with the new access keys.
+
   
 ## Changelist
 - **03/26/2025** - Added provisions and modified setup for Backend URI and Artifact URI storage.
 - **03/26/2025** - Reorganized setup of applications for full stack.
+- **04/01/2025** - Added recovery for expired MinIO Access Keys.
