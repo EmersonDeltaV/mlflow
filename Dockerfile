@@ -21,7 +21,7 @@ EXPOSE 5000
 
 # Define environment variables for the backend store URI and MinIO
 ENV BACKEND_STORE_URI=sqlite:///mlflow.db
-ENV ARTIFACT_ROOT=s3://my-minio-bucket
+ENV ARTIFACT_ROOT=s3://mlflow
 
 # Set the entry point to run MLFlow
-ENTRYPOINT ["sh", "-c", "mlflow server --host 0.0.0.0 --port 5000 --backend-store-uri $BACKEND_STORE_URI --serve-artifacts --default-artifact-root $ARTIFACT_ROOT"]
+ENTRYPOINT ["sh", "-c", "mlflow server --host 0.0.0.0 --port 5000 --backend-store-uri $BACKEND_STORE_URI --serve-artifacts --artifacts-destination $ARTIFACT_ROOT"]
