@@ -8,12 +8,20 @@ This repo holds the Dockerfile image used for the MLFlow application currently a
 - **Models**: Manage and deploy models from various ML libraries.
 - **Model Registry**: Centralized model store for managing model versions, stages, and annotations.
 
-## Use Cases
+## Uses
 
 - **Experiment Tracking**: Keep track of experiments, compare results, and reproduce runs.
 - **Model Management**: Version control for models, facilitating collaboration and deployment.
 - **Reproducibility**: Ensure that experiments and models can be reproduced by others.
 - **Deployment**: Deploy models to various platforms, including Docker, Kubernetes, and cloud services.
+
+## Use Cases
+1. **Data Scientist - Experiment Tracking and Comparison** - Data scientists can use MLFlow to systematically track and compare experiments, making it easier to identify the best
+models and configurations.
+2. **Machine Learning Engineers - Model Deployment and Management** - ML engineers can use MLFlow to manage the entire lifecycle of machine learning models, from training to deployment
+and monitoring, ensuring robust and reliable model performance.
+3. **DevOps Engineers - Continuous Integration and Continuous Deployment (CI/CD) for ML Models​** DevOps engineers can integrate MLFlow into CI/CD pipelines to automate the deployment and monitoring of machine
+learning models, ensuring seamless updates and consistent performance.
 
 # Prerequisites
 
@@ -61,3 +69,4 @@ For now, there is no way to renew the access keys to minio through the MLFlow We
 - **03/26/2025** - Added provisions and modified setup for Backend URI and Artifact URI storage.
 - **03/26/2025** - Reorganized setup of applications for full stack.
 - **04/01/2025** - Added recovery for expired MinIO Access Keys.
+- **04/04/2025** - Added users for uses cases.
